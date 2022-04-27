@@ -18,7 +18,7 @@ import com.github.kwhat.jnativehook.keyboard.NativeKeyListener;
 
 public class Main implements NativeKeyListener {
 	
-	static  JButton ColorPreview = new JButton("Autoclicker");
+	static  JButton ColorPreview = new JButton("ライトニングo");
 	static  JButton AC1 = new JButton("L: false R: false");
 
 	static boolean ac = false;
@@ -84,7 +84,7 @@ public class Main implements NativeKeyListener {
 					 System.out.println("AC: " + ac);
 					
 					if(ac) {
-						 	Thread.sleep(55);						    
+						 	Thread.sleep(30);						    
 						    robot.mousePress(InputEvent.BUTTON1_MASK);
 						    robot.mouseRelease(InputEvent.BUTTON1_MASK);
 						    System.out.println("AC: HIT");

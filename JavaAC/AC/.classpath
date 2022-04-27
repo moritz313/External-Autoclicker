@@ -6,6 +6,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="C:/Users/morit/Desktop/JavaAC/AC/lib/jnativehook-2.2.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/morit/Desktop/External-Autoclicker/JavaAC/AC/lib/jnativehook-2.2.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
