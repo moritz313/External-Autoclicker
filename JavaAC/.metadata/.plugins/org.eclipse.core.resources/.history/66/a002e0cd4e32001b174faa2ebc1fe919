@@ -1,0 +1,628 @@
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+import java.util.Random;
+import java.util.concurrent.TimeUnit;
+
+public class AutoPilot {
+	static int n = 0;
+	
+	public static void StartAutoPilot() throws InterruptedException, AWTException {
+		for(int i = 0; i < Gui.Waves; i++) {
+			
+			
+			Thread.sleep(1500);
+			 AutoPilot.LClick();
+			 Thread.sleep(500);
+			 
+			 if(n == 0) {
+				 AutoPilot.Spam1();	 
+				 n = 1;
+			 } 
+			 if(n == 1) {
+				 AutoPilot.Spam2(); 
+				 n = 0;
+			 }
+			 
+			 
+			 
+			 
+			 AutoPilot.Enter();			
+			 Thread.sleep((Gui.Delay * 1000) + 1000);			
+			 AutoPilot.LClick();
+			 Thread.sleep(500);			 
+			 AutoPilot.Spam3();			 			 
+			 AutoPilot.Enter();
+			 Thread.sleep((Gui.Delay * 1000) + 1000);	
+		}
+		
+		
+	}
+	
+	
+	
+
+	public static void Spam1() throws AWTException, InterruptedException {
+        final Robot robot = new Robot();
+       //hey
+                TimeUnit.SECONDS.sleep(2);
+                robot.keyPress(KeyEvent.VK_H);
+                robot.keyRelease(KeyEvent.VK_H);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_E);
+                robot.keyRelease(KeyEvent.VK_E);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_Y);
+                robot.keyRelease(KeyEvent.VK_Y);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                
+                robot.keyPress(KeyEvent.VK_SPACE);
+                robot.keyRelease(KeyEvent.VK_SPACE);
+                TimeUnit.MILLISECONDS.sleep(5);
+             //addet   
+                robot.keyPress(KeyEvent.VK_A);
+                robot.keyRelease(KeyEvent.VK_A);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_D);
+                robot.keyRelease(KeyEvent.VK_D);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_D);
+                robot.keyRelease(KeyEvent.VK_D);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_E);
+                robot.keyRelease(KeyEvent.VK_E);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_T);
+                robot.keyRelease(KeyEvent.VK_T);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                robot.keyPress(KeyEvent.VK_SPACE);
+                robot.keyRelease(KeyEvent.VK_SPACE);
+                TimeUnit.MILLISECONDS.sleep(5);
+               //Mich 
+                robot.keyPress(KeyEvent.VK_M);
+                robot.keyRelease(KeyEvent.VK_M);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_I);
+                robot.keyRelease(KeyEvent.VK_I);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_C);
+                robot.keyRelease(KeyEvent.VK_C);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_H);
+                robot.keyRelease(KeyEvent.VK_H);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                robot.keyPress(KeyEvent.VK_SPACE);
+                robot.keyRelease(KeyEvent.VK_SPACE);
+                TimeUnit.MILLISECONDS.sleep(5);
+             //auf   
+                robot.keyPress(KeyEvent.VK_A);
+                robot.keyRelease(KeyEvent.VK_A);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_U);
+                robot.keyRelease(KeyEvent.VK_U);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_F);
+                robot.keyRelease(KeyEvent.VK_F);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                robot.keyPress(KeyEvent.VK_SPACE);
+                robot.keyRelease(KeyEvent.VK_SPACE);
+                TimeUnit.MILLISECONDS.sleep(5);
+                //snep
+                robot.keyPress(KeyEvent.VK_S);
+                robot.keyRelease(KeyEvent.VK_S);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_N);
+                robot.keyRelease(KeyEvent.VK_N);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_E);
+                robot.keyRelease(KeyEvent.VK_E);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_P);
+                robot.keyRelease(KeyEvent.VK_P);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                robot.keyPress(KeyEvent.VK_SPACE);
+                robot.keyRelease(KeyEvent.VK_SPACE);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                
+           //heiße      
+                robot.keyPress(KeyEvent.VK_H);
+                robot.keyRelease(KeyEvent.VK_H);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_E);
+                robot.keyRelease(KeyEvent.VK_E);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_I);
+                robot.keyRelease(KeyEvent.VK_I);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_S);
+                robot.keyRelease(KeyEvent.VK_S);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_S);
+                robot.keyRelease(KeyEvent.VK_S);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_E);
+                robot.keyRelease(KeyEvent.VK_E);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                robot.keyPress(KeyEvent.VK_SPACE);
+                robot.keyRelease(KeyEvent.VK_SPACE);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+              //Da  
+                robot.keyPress(KeyEvent.VK_D);
+                robot.keyRelease(KeyEvent.VK_D);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_A);
+                robot.keyRelease(KeyEvent.VK_A);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                
+                robot.keyPress(KeyEvent.VK_SPACE);
+                robot.keyRelease(KeyEvent.VK_SPACE);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+              //So 
+                robot.keyPress(KeyEvent.VK_S);
+                robot.keyRelease(KeyEvent.VK_S);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_O);
+                robot.keyRelease(KeyEvent.VK_O);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                robot.keyPress(KeyEvent.VK_SPACE);
+                robot.keyRelease(KeyEvent.VK_SPACE);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+              //wie 
+                robot.keyPress(KeyEvent.VK_W);
+                robot.keyRelease(KeyEvent.VK_W);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_I);
+                robot.keyRelease(KeyEvent.VK_I);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_E);
+                robot.keyRelease(KeyEvent.VK_E);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                robot.keyPress(KeyEvent.VK_SPACE);
+                robot.keyRelease(KeyEvent.VK_SPACE);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+              //hier
+                robot.keyPress(KeyEvent.VK_H);
+                robot.keyRelease(KeyEvent.VK_H);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_I);
+                robot.keyRelease(KeyEvent.VK_I);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_E);
+                robot.keyRelease(KeyEvent.VK_E);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_R);
+                robot.keyRelease(KeyEvent.VK_R);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                
+                
+                robot.keyPress(KeyEvent.VK_SPACE);
+                robot.keyRelease(KeyEvent.VK_SPACE);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                
+                
+                robot.keyPress(KeyEvent.VK_SHIFT);
+                robot.keyPress(KeyEvent.VK_COMMA);
+              
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyRelease(KeyEvent.VK_COMMA);
+                robot.keyRelease(KeyEvent.VK_SHIFT);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                
+                robot.keyPress(KeyEvent.VK_SHIFT);
+                robot.keyPress(KeyEvent.VK_9);
+              
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyRelease(KeyEvent.VK_9);
+                robot.keyRelease(KeyEvent.VK_SHIFT);
+                
+	}
+	
+	
+	public static void Spam2() throws AWTException, InterruptedException {
+        final Robot robot = new Robot();
+     
+                
+                
+            
+             //addet   
+                robot.keyPress(KeyEvent.VK_A);
+                robot.keyRelease(KeyEvent.VK_A);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_D);
+                robot.keyRelease(KeyEvent.VK_D);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_D);
+                robot.keyRelease(KeyEvent.VK_D);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_E);
+                robot.keyRelease(KeyEvent.VK_E);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_T);
+                robot.keyRelease(KeyEvent.VK_T);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                robot.keyPress(KeyEvent.VK_SPACE);
+                robot.keyRelease(KeyEvent.VK_SPACE);
+                TimeUnit.MILLISECONDS.sleep(5);
+               //Mich 
+                robot.keyPress(KeyEvent.VK_M);
+                robot.keyRelease(KeyEvent.VK_M);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_I);
+                robot.keyRelease(KeyEvent.VK_I);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_C);
+                robot.keyRelease(KeyEvent.VK_C);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_H);
+                robot.keyRelease(KeyEvent.VK_H);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                robot.keyPress(KeyEvent.VK_SPACE);
+                robot.keyRelease(KeyEvent.VK_SPACE);
+                TimeUnit.MILLISECONDS.sleep(5);
+             //auf   
+                robot.keyPress(KeyEvent.VK_A);
+                robot.keyRelease(KeyEvent.VK_A);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_U);
+                robot.keyRelease(KeyEvent.VK_U);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_F);
+                robot.keyRelease(KeyEvent.VK_F);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                robot.keyPress(KeyEvent.VK_SPACE);
+                robot.keyRelease(KeyEvent.VK_SPACE);
+                TimeUnit.MILLISECONDS.sleep(5);
+                //snep
+                robot.keyPress(KeyEvent.VK_S);
+                robot.keyRelease(KeyEvent.VK_S);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_N);
+                robot.keyRelease(KeyEvent.VK_N);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_E);
+                robot.keyRelease(KeyEvent.VK_E);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_P);
+                robot.keyRelease(KeyEvent.VK_P);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                robot.keyPress(KeyEvent.VK_SPACE);
+                robot.keyRelease(KeyEvent.VK_SPACE);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                
+           //heiße      
+                robot.keyPress(KeyEvent.VK_H);
+                robot.keyRelease(KeyEvent.VK_H);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_E);
+                robot.keyRelease(KeyEvent.VK_E);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_I);
+                robot.keyRelease(KeyEvent.VK_I);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_S);
+                robot.keyRelease(KeyEvent.VK_S);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_S);
+                robot.keyRelease(KeyEvent.VK_S);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_E);
+                robot.keyRelease(KeyEvent.VK_E);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                robot.keyPress(KeyEvent.VK_SPACE);
+                robot.keyRelease(KeyEvent.VK_SPACE);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+              //Da  
+                robot.keyPress(KeyEvent.VK_D);
+                robot.keyRelease(KeyEvent.VK_D);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_A);
+                robot.keyRelease(KeyEvent.VK_A);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                
+                robot.keyPress(KeyEvent.VK_SPACE);
+                robot.keyRelease(KeyEvent.VK_SPACE);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+              //So 
+                robot.keyPress(KeyEvent.VK_S);
+                robot.keyRelease(KeyEvent.VK_S);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_O);
+                robot.keyRelease(KeyEvent.VK_O);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                robot.keyPress(KeyEvent.VK_SPACE);
+                robot.keyRelease(KeyEvent.VK_SPACE);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+              //wie 
+                robot.keyPress(KeyEvent.VK_W);
+                robot.keyRelease(KeyEvent.VK_W);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_I);
+                robot.keyRelease(KeyEvent.VK_I);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_E);
+                robot.keyRelease(KeyEvent.VK_E);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                robot.keyPress(KeyEvent.VK_SPACE);
+                robot.keyRelease(KeyEvent.VK_SPACE);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+              //hier
+                robot.keyPress(KeyEvent.VK_H);
+                robot.keyRelease(KeyEvent.VK_H);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_I);
+                robot.keyRelease(KeyEvent.VK_I);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_E);
+                robot.keyRelease(KeyEvent.VK_E);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_R);
+                robot.keyRelease(KeyEvent.VK_R);
+                
+                
+                robot.keyPress(KeyEvent.VK_SPACE);
+                robot.keyRelease(KeyEvent.VK_SPACE);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                
+                
+                robot.keyPress(KeyEvent.VK_SHIFT);
+                robot.keyPress(KeyEvent.VK_COMMA);
+              
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyRelease(KeyEvent.VK_COMMA);
+                robot.keyRelease(KeyEvent.VK_SHIFT);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                
+                robot.keyPress(KeyEvent.VK_SHIFT);
+                robot.keyPress(KeyEvent.VK_D);
+              
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyRelease(KeyEvent.VK_D);
+                robot.keyRelease(KeyEvent.VK_SHIFT); 
+                
+                
+                
+	}
+	
+	public static void Spam3() throws AWTException, InterruptedException {
+        final Robot robot = new Robot();
+     
+                
+                
+            
+             //antworte
+                robot.keyPress(KeyEvent.VK_A);
+                robot.keyRelease(KeyEvent.VK_A);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_N);
+                robot.keyRelease(KeyEvent.VK_N);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_T);
+                robot.keyRelease(KeyEvent.VK_T);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_W);
+                robot.keyRelease(KeyEvent.VK_W);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_O);
+                robot.keyRelease(KeyEvent.VK_O);
+                TimeUnit.MILLISECONDS.sleep(5);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_R);
+                robot.keyRelease(KeyEvent.VK_R);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_T);
+                robot.keyRelease(KeyEvent.VK_T);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_E);
+                robot.keyRelease(KeyEvent.VK_E);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                
+                robot.keyPress(KeyEvent.VK_SPACE);
+                robot.keyRelease(KeyEvent.VK_SPACE);
+                TimeUnit.MILLISECONDS.sleep(5);
+               //nur
+                robot.keyPress(KeyEvent.VK_N);
+                robot.keyRelease(KeyEvent.VK_N);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_U);
+                robot.keyRelease(KeyEvent.VK_U);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_R);
+                robot.keyRelease(KeyEvent.VK_R);
+                TimeUnit.MILLISECONDS.sleep(5);
+             
+                
+                robot.keyPress(KeyEvent.VK_SPACE);
+                robot.keyRelease(KeyEvent.VK_SPACE);
+                TimeUnit.MILLISECONDS.sleep(5);
+             //auf   
+                robot.keyPress(KeyEvent.VK_A);
+                robot.keyRelease(KeyEvent.VK_A);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_U);
+                robot.keyRelease(KeyEvent.VK_U);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_F);
+                robot.keyRelease(KeyEvent.VK_F);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                robot.keyPress(KeyEvent.VK_SPACE);
+                robot.keyRelease(KeyEvent.VK_SPACE);
+                TimeUnit.MILLISECONDS.sleep(5);
+                //snep
+                robot.keyPress(KeyEvent.VK_S);
+                robot.keyRelease(KeyEvent.VK_S);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_N);
+                robot.keyRelease(KeyEvent.VK_N);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_E);
+                robot.keyRelease(KeyEvent.VK_E);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_P);
+                robot.keyRelease(KeyEvent.VK_P);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                robot.keyPress(KeyEvent.VK_SPACE);
+                robot.keyRelease(KeyEvent.VK_SPACE);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                
+           //heiße      
+                robot.keyPress(KeyEvent.VK_H);
+                robot.keyRelease(KeyEvent.VK_H);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_E);
+                robot.keyRelease(KeyEvent.VK_E);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_I);
+                robot.keyRelease(KeyEvent.VK_I);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_S);
+                robot.keyRelease(KeyEvent.VK_S);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_S);
+                robot.keyRelease(KeyEvent.VK_S);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_E);
+                robot.keyRelease(KeyEvent.VK_E);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                robot.keyPress(KeyEvent.VK_SPACE);
+                robot.keyRelease(KeyEvent.VK_SPACE);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+              //Da  
+                robot.keyPress(KeyEvent.VK_D);
+                robot.keyRelease(KeyEvent.VK_D);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_A);
+                robot.keyRelease(KeyEvent.VK_A);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                
+                robot.keyPress(KeyEvent.VK_SPACE);
+                robot.keyRelease(KeyEvent.VK_SPACE);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+              //So 
+                robot.keyPress(KeyEvent.VK_S);
+                robot.keyRelease(KeyEvent.VK_S);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_O);
+                robot.keyRelease(KeyEvent.VK_O);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                robot.keyPress(KeyEvent.VK_SPACE);
+                robot.keyRelease(KeyEvent.VK_SPACE);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+              //wie 
+                robot.keyPress(KeyEvent.VK_W);
+                robot.keyRelease(KeyEvent.VK_W);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_I);
+                robot.keyRelease(KeyEvent.VK_I);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_E);
+                robot.keyRelease(KeyEvent.VK_E);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                robot.keyPress(KeyEvent.VK_SPACE);
+                robot.keyRelease(KeyEvent.VK_SPACE);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+              //hier
+                robot.keyPress(KeyEvent.VK_H);
+                robot.keyRelease(KeyEvent.VK_H);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_I);
+                robot.keyRelease(KeyEvent.VK_I);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_E);
+                robot.keyRelease(KeyEvent.VK_E);
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyPress(KeyEvent.VK_R);
+                robot.keyRelease(KeyEvent.VK_R);
+                
+                
+                robot.keyPress(KeyEvent.VK_SPACE);
+                robot.keyRelease(KeyEvent.VK_SPACE);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                
+                
+                robot.keyPress(KeyEvent.VK_SHIFT);
+                robot.keyPress(KeyEvent.VK_COMMA);
+              
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyRelease(KeyEvent.VK_COMMA);
+                robot.keyRelease(KeyEvent.VK_SHIFT);
+                TimeUnit.MILLISECONDS.sleep(5);
+                
+                
+                robot.keyPress(KeyEvent.VK_SHIFT);
+                robot.keyPress(KeyEvent.VK_D);
+              
+                TimeUnit.MILLISECONDS.sleep(5);
+                robot.keyRelease(KeyEvent.VK_D);
+                robot.keyRelease(KeyEvent.VK_SHIFT); 
+                
+                
+                
+	}
+	
+	
+	
+	public static void LClick() throws AWTException, InterruptedException {
+        final Robot robot = new Robot();
+       //hey
+                
+                robot.mousePress(16);
+                robot.mouseRelease(16);
+              
+               
+	}
+	
+	public static void Enter() throws AWTException, InterruptedException {
+        final Robot robot = new Robot();
+       
+                
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+              
+               
+	}
+}

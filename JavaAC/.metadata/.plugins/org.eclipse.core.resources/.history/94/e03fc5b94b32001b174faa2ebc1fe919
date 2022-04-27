@@ -1,0 +1,369 @@
+
+
+
+import java.awt.*;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.ClipboardOwner;
+import java.awt.datatransfer.StringSelection;
+import java.awt.datatransfer.Transferable;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+
+import javax.swing.*;
+
+public class Gui extends JPanel implements ClipboardOwner
+{
+    /**
+	 * 
+	 */
+	
+	public static int c = 0;
+	private static final long serialVersionUID = 1L;
+	private JButton jcomp4;
+	private JButton jcomp5;
+	private JButton jcomp6;
+	private JButton jcomp7;
+	public JButton jcomp8;
+	public JButton jcomp9;
+	public JButton jcomp10;
+	public JButton exit;
+	private JTextField username;
+	private JLabel status;
+	
+    public static String StatusText = "Status:";
+	private int Count = 1;
+	
+	 public static int Waves = 1;
+  
+    
+    public Gui() {
+       
+        this.setBackground(Color.BLACK);
+        this.jcomp4 = new JButton("Get Spam");
+        this.jcomp5 = new JButton("Chatroom2000");
+        this.jcomp6 = new JButton("Open Chatroom");
+        this.jcomp7 = new JButton("Open Anti");
+        this.jcomp8 = new JButton("Snapfame v" + Main.version);
+        this.jcomp9 = new JButton("AutoPilot");
+        this.jcomp10 = new JButton("Waves: 1");
+        this.exit = new JButton("Exit");
+        this.username = new JTextField();
+        this.setStatus(new JLabel("Status: Wellcome!"));
+       
+        this.setPreferredSize(new Dimension(330, 250));
+        this.setLayout(null);
+        this.setBackground(Color.BLACK);
+        this.add(this.jcomp4);
+       // this.add(this.jcomp5);
+        this.add(this.jcomp6);
+        this.add(this.jcomp7);
+        this.add(this.jcomp8);
+        this.add(this.jcomp9);
+        this.add(this.jcomp10);
+        this.add(this.exit);
+        this.add(this.username);
+        this.add(this.getStatus());
+           
+        this.jcomp4.setForeground(Color.BLACK);     
+        this.jcomp5.setForeground(Color.BLACK);       
+        this.jcomp6.setForeground(Color.BLACK);        
+        this.jcomp7.setForeground(Color.BLACK);        
+        this.jcomp8.setForeground(Color.BLACK);
+        this.jcomp9.setForeground(Color.BLACK);
+        this.jcomp10.setForeground(Color.BLACK);
+        this.getStatus().setForeground(Color.YELLOW);
+        jcomp8.setBackground(new Color(255, 252, 0));	
+		jcomp4.setBackground(new Color(255, 252, 0));
+		jcomp5.setBackground(new Color(255, 252, 0));	
+		jcomp6.setBackground(new Color(255, 252, 0));
+		jcomp7.setBackground(new Color(255, 252, 0));
+		jcomp9.setBackground(new Color(255, 252, 0));
+		jcomp10.setBackground(new Color(255, 252, 0));
+		exit.setBackground(new Color(255, 252, 0));
+        
+        
+        
+        final int h = 30;
+        this.jcomp4.setBounds(10, h + 30, 150, 25);
+        this.jcomp5.setBounds(10, h + 60, 150, 25);
+        this.jcomp6.setBounds(10, h + 90, 150, 25);
+        this.jcomp7.setBounds(10, h + 120, 150, 25);
+        this.jcomp8.setBounds(10, h, 310, 25);
+        this.jcomp9.setBounds(10, h + 60, 150, 25);
+        this.jcomp10.setBounds(170, h + 90, 150, 25);
+        this.exit.setBounds(170, h + 120, 150, 25);
+        this.getStatus().setBounds(10, h + 150, 300, 25);
+        this.username.setText("");       
+        this.username.setBounds(170, h + 30, 150, 25);
+  
+       
+        
+        this.exit.addActionListener(new ActionListener() {
+
+    			@Override
+    			public void actionPerformed(ActionEvent arg0) {
+    				System.exit(1);
+    			}
+            	
+            });
+            
+        
+      
+        this.jcomp10.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				
+				if(Waves <= 4) {
+					Waves++;
+					Gui.this.jcomp10.setText("Waves: " + Waves);
+					Gui.this.status.setText("Status: Changed Waves to " + Waves);
+					
+				}
+				else if(Waves != 1){
+					Waves = 1;
+					Gui.this.jcomp10.setText("Waves: " + Waves);
+					int k = Waves;
+					Gui.this.status.setText("Status: Changed Waves to " + Waves);
+				}
+				
+				System.out.print(Waves);
+			}
+        	
+        });
+        
+        
+        this.jcomp9.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				try {
+			
+					AutoPilot.StartAutoPilot();
+					
+					Gui.this.status.setText("Status: Auto Pilot Finished!");
+					
+				} catch (InterruptedException e) {				
+					e.printStackTrace();
+				} catch (AWTException e) {	
+					e.printStackTrace();
+				}
+				
+			}
+        	
+        });
+        
+
+        this.jcomp8.addActionListener(new ActionListener() {
+        	
+			@Override
+			public void actionPerformed(ActionEvent e) {
+			PlaySound.start();	
+				
+				
+			if(c == 0) {
+			jcomp4.setBackground(new Color(255, 88, 77));	
+			jcomp5.setBackground(new Color(255, 88, 77));	
+			jcomp6.setBackground(new Color(255, 88, 77));	
+			jcomp7.setBackground(new Color(255, 88, 77));	
+			jcomp8.setBackground(new Color(255, 88, 77));	
+			jcomp9.setBackground(new Color(255, 88, 77));
+			jcomp10.setBackground(new Color(255, 88, 77));	
+			exit.setBackground(new Color(255, 88, 77));	
+			jcomp4.setForeground(Color.white);     
+	        jcomp5.setForeground(Color.white);       
+	        jcomp6.setForeground(Color.white);        
+	        jcomp7.setForeground(Color.white);        
+	        jcomp8.setForeground(Color.white);
+	        jcomp9.setForeground(Color.white);
+	        jcomp10.setForeground(Color.white);
+	        exit.setForeground(Color.white);
+	        status.setForeground(Color.RED);
+			
+			System.out.print("yeet");
+			c = 1;	
+			}
+			
+			else if(c == 1) {
+			jcomp8.setBackground(new Color(55, 164, 222));
+			jcomp4.setBackground(new Color(55, 164, 222));	
+			jcomp5.setBackground(new Color(55, 164, 222));	
+			jcomp6.setBackground(new Color(55, 164, 222));	
+			jcomp7.setBackground(new Color(55, 164, 222));	
+			jcomp9.setBackground(new Color(55, 164, 222));	
+			jcomp10.setBackground(new Color(55, 164, 222));	
+			exit.setBackground(new Color(55, 164, 222));	
+			jcomp4.setForeground(Color.white);     
+	        jcomp5.setForeground(Color.white);       
+	        jcomp6.setForeground(Color.white);        
+	        jcomp7.setForeground(Color.white);        
+	        jcomp8.setForeground(Color.white);
+	        jcomp9.setForeground(Color.white);
+	        jcomp10.setForeground(Color.white);        
+	        exit.setForeground(Color.white);
+	        status.setForeground(Color.BLUE);
+			
+			c = 2;
+			}
+
+			else if(c == 2) {
+	
+			
+			jcomp8.setBackground(new Color(255, 252, 0));
+			jcomp8.setBackground(new Color(255, 252, 0));
+			jcomp4.setBackground(new Color(255, 252, 0));
+			jcomp5.setBackground(new Color(255, 252, 0));	
+			jcomp6.setBackground(new Color(255, 252, 0));
+			jcomp9.setBackground(new Color(255, 252, 0));
+			jcomp7.setBackground(new Color(255, 252, 0));
+			jcomp10.setBackground(new Color(255, 252, 0));
+			exit.setBackground(new Color(255, 252, 0));
+			jcomp4.setForeground(Color.BLACK);     
+	        jcomp5.setForeground(Color.BLACK);       
+	        jcomp6.setForeground(Color.BLACK);        
+	        jcomp7.setForeground(Color.BLACK);        
+	        jcomp8.setForeground(Color.BLACK);
+	        jcomp9.setForeground(Color.BLACK);
+	        jcomp10.setForeground(Color.BLACK);        
+	        exit.setForeground(Color.BLACK);
+	        status.setForeground(Color.YELLOW);
+			
+			c = 0;
+			}
+			
+			Gui.this.status.setText("Status: Changed Color");
+			
+			}
+		});
+        
+        
+        
+        this.jcomp4.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if(Count == 1) {
+					setClipboardContents("Heyy naa ;) suche versaute typen addet mich auf snep heiße da " + Gui.this.username.getText() + "   :D");
+					Count = Count + 1;
+					}
+				else if(Count == 2) {
+					setClipboardContents("Addet mich auf snep heiße da " + Gui.this.username.getText() + " bin versaut o.o");
+					Count = Count + 1;
+					}
+				else if(Count == 3) {
+					setClipboardContents("heyyy suche Süße typen addet mich auf snep heiße da " + Gui.this.username.getText() + " ;)");
+					Count = Count + 1;
+					}
+				else if(Count == 4) {
+					setClipboardContents("Hey addet mich schnell auf snep bevor ich hier gesperrt werde weil ich so versaut bin heiße da " + Gui.this.username.getText()+ " :D");
+					Count = Count + 1;
+					}
+				else if(Count == 5) {
+					setClipboardContents("Suche süße boys :P addet mich auf snep heiße da" + Gui.this.username.getText() + "  x)");
+					Count = Count + 1; 
+					}
+				else if(Count == 6) {
+					setClipboardContents("Zeige was 0.0 aber nur auf snep! addet mich da heiße dort " + Gui.this.username.getText() + " :P");
+					Count = Count + 1;
+					}
+				else if(Count == 7) {
+					setClipboardContents("addet mich auf snep heiße da " + Gui.this.username.getText() + "   ;P :D");
+					Count = Count + 1;
+					}
+				else if(Count == 8) {
+					setClipboardContents("antworte nur auf snep addet mich da heiße da " + Gui.this.username.getText() + " sonst verpasst ihr da was;P");
+					Count = 1;
+					}
+				
+				Gui.this.status.setText("Status: Copied Text to Clipboard");
+				
+				
+							}
+		});
+        
+        
+        
+        
+       this.jcomp5.addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			try {
+				AutoType.Spam(1);
+			} catch (AWTException e1) {
+				
+			} catch (InterruptedException e1) {
+				
+			}
+			
+		}
+	});
+       
+       
+       this.jcomp6.addActionListener(new ActionListener() {
+   		
+   		@Override
+   		public void actionPerformed(ActionEvent e) {
+   			Desktop yes = Desktop.getDesktop();
+   			try {
+				yes.browse(new URI("https://www.chatroom2000.de/"));
+			} catch (IOException e1) {
+				
+				e1.printStackTrace();
+			} catch (URISyntaxException e1) {
+				
+				e1.printStackTrace();
+			}
+   		}
+   	});
+       
+       this.jcomp7.addActionListener(new ActionListener() {
+      		
+      		@Override
+      		public void actionPerformed(ActionEvent e) {
+      			Desktop yes = Desktop.getDesktop();
+      			try {
+   				yes.browse(new URI("https://www.antiland.com/"));
+   				yes.browse(new URI("https://temp-mail.org/de/"));
+   				
+   			} catch (IOException e1) {
+   				
+   				e1.printStackTrace();
+   			} catch (URISyntaxException e1) {
+   				
+   				e1.printStackTrace();
+   			}
+      		}
+      	});
+       
+    }
+    
+   
+    
+    public void setClipboardContents(String string){
+        StringSelection stringSelection = new StringSelection(string);
+        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+        clipboard.setContents(stringSelection, this);
+      }
+
+	@Override
+	public void lostOwnership(Clipboard clipboard, Transferable contents) {
+		
+		
+	}
+
+	public JLabel getStatus() {
+		return status;
+	}
+
+	public void setStatus(JLabel status) {
+		this.status = status;
+	}
+	
+	
+	 
+        
+}

@@ -1,0 +1,138 @@
+
+import java.awt.AWTException;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.util.concurrent.TimeUnit;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+import com.github.kwhat.jnativehook.GlobalScreen;
+import com.github.kwhat.jnativehook.NativeHookException;
+import com.github.kwhat.jnativehook.keyboard.NativeKeyEvent;
+import com.github.kwhat.jnativehook.keyboard.NativeKeyListener;
+
+public class GlobalKeyListenerExample implements NativeKeyListener {
+	
+	
+	public void nativeKeyPressed(NativeKeyEvent e) {				
+		//System.out.println("Key Pressed: " + NativeKeyEvent.getKeyText(e.getKeyCode()));sad
+		if (e.getKeyCode() == NativeKeyEvent.VC_SPACE) {
+			int i = 1;	
+			try {
+				Robot robot = new Robot();
+				for(i = 1; i > 0; i++) {
+					try {
+						TimeUnit.MILLISECONDS.sleep(12);
+						robot.keyPress(NativeKeyEvent.VC_SPACE);
+					} catch (InterruptedException e1) {
+					
+					}					
+				}
+			} catch (AWTException e2) {				
+				e2.printStackTrace();
+			}		
+			
+            		
+        	}
+	}
+
+	public void nativeKeyReleased(NativeKeyEvent e) {
+		
+		if(NativeKeyEvent.getKeyText(e.getKeyCode()) == "O") {
+			System.out.println("Key Released: " + NativeKeyEvent.getKeyText(e.getKeyCode()));
+			 System.out.println("Exit");
+			System.exit(1);
+		}
+		
+		if(NativeKeyEvent.getKeyText(e.getKeyCode()) == "X") {
+			System.out.println("Key Released: " + NativeKeyEvent.getKeyText(e.getKeyCode()));
+			new Thread(() -> {
+				
+				int i = 1;				
+				Dimension size = Toolkit.getDefaultToolkit().getScreenSize();		        		       
+		        int width = (int)size.getWidth();		        		   
+		        int height = (int)size.getHeight();
+		        
+		        System.out.println("Current Screen resolution : " + "width : " + width + " height : " + height);		        
+		        int X = width / 2 + 5;
+		        int Y = height / 2 + 5;				
+				 try {
+					 Robot robot = new Robot();					 					
+					 TimeUnit.MILLISECONDS.sleep(200);
+					 Color color = robot.getPixelColor(X, Y);
+//						System.out.println("Red   = " + color.getRed());
+//						System.out.println("Green = " + color.getGreen());
+//						System.out.println("Blue  = " + color.getBlue());
+						
+						
+						for(i = 1; i > 0; i++) {
+							Color color2 = robot.getPixelColor(X, Y);
+							if(Math.abs(color2.getRed() - color.getRed()) >= 20 || Math.abs(color2.getGreen() - color.getGreen()) >= 20 || Math.abs(color2.getBlue() - color.getBlue()) >= 20) {
+								System.out.println("Shoot! ");
+								robot.mousePress(16);
+								robot.mouseRelease(16);
+								
+								 
+								System.out.println("Red   = " + (color2.getRed() - color.getRed()));
+								System.out.println("Green = " + (color2.getGreen() -color.getGreen()));
+								System.out.println("Blue  = " + (color2.getBlue() - color.getBlue()));
+								i = -1;
+							}
+
+						
+							
+							}
+				} catch (AWTException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
+				
+				
+			}).start();
+		}
+	}
+
+	public void nativeKeyTyped(NativeKeyEvent e) {
+		//System.out.println("Key Typed: " + e.getKeyText(e.getKeyCode()));
+	}
+
+	public static void main(String[] args) {
+		System.out.println("Starting..");
+//		JFrame frame = new JFrame("Transparent Windows");
+//        frame.setUndecorated(true);
+//        frame.setBackground(new Color(0, 0, 0, 0));
+//        frame.setAlwaysOnTop(true);
+//        // Without this, the window is draggable from any non transparent
+//        // point, including points  inside textboxes.
+//        frame.getRootPane().putClientProperty("apple.awt.draggableWindowBackground", false);
+//
+//        frame.getContentPane().setLayout(new java.awt.BorderLayout());
+//        frame.getContentPane().add(new JLabel("yoyo"), java.awt.BorderLayout.NORTH);
+//      
+//        frame.setVisible(true);
+//        frame.pack();
+		
+		try {
+			GlobalScreen.registerNativeHook();
+		}
+		catch (NativeHookException ex) {
+			System.err.println("There was a problem registering the native hook.");
+			System.err.println(ex.getMessage());
+
+			System.exit(1);
+		}
+
+		GlobalScreen.addNativeKeyListener(new GlobalKeyListenerExample());
+		
+
+	}
+}
